@@ -9,18 +9,11 @@ block header
 block content
 	div.container(ng-controller="consultaUsuario")
 		h2 Consultar usuarios
-		div
-			form
-				div.form-group
-					label Usuario
-					input#inputUsuario.form-control(type="text", placeholder="Usuario")
-				div.form-group
-					label(for="inputEmail") Email
-					input#inputEmail.form-control(type="email", placeholder="Email")
-				div.form-group
-					label(for="inputPassword") Password
-					input#inputPassword.form-control(type="password", placeholder="Password")
-				button.btn.btn-primary(type="submit") Registrarse
+		ul
+			each usuario, i in usuarios
+				li #{usuario.usuario}
+
+
 
 
 block scripts
