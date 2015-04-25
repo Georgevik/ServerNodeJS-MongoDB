@@ -7,15 +7,16 @@ block header
 		a(href="#") Usuarios
 
 block content
-	div.container(ng-controller="consultaUsuario")
+	div.container(ng-controller="consultaUsuario", ng-init="usuarios= #{JSON.stringify(usuarios)}")
 		h2 Consultar usuarios
-		ul
-			each usuario, i in usuarios
-				li #{usuario.usuario}
+
+		table.table(ng-table="tableParams")
+			tr(ng-repeat="user in usuarios")
+				td.col-lg-3.text-center(data-title="'Usuario'") {{user.usuario}}
+				td.col-lg-3.text-center(data-title="'Email'") {{user.email}}
+				td.col-lg-3.text-center(data-title="'Password'") {{user.password}}
+				td.col-lg-3.text-center
+					input(id="editRowBtn{{user.id}}" type="button", value="Editar", ng-click="modalEditor(user)" )
 
 
-
-
-block scripts
-	script(src="/js/consulta_usuarios.js")
 

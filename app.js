@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
  */
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('172.16.170.128:27017/nodetest1');
+var db = monk('192.168.58.133:27017/nodetest1');
 
 
 /**

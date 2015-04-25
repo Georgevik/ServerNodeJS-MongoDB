@@ -11,17 +11,17 @@ block content
 	div.container
 		h2 Registro
 		div.bs-example
-			form#formAddUsuario(name="addusuario",method="post",action="/addUsuario")
+			form(name="addusuario",method="post",action="/addUsuario")
 				div.form-group
 					label Usuario
-					input#inputUsuario.form-control(type="text", name="usuario", placeholder="Usuario")
+					input#inputUsuario.form-control(type="text", name="usuario", placeholder="Usuario" required )
 
 				div.form-group
 					label(for="inputEmail") Email
-					input#inputEmail.form-control(type="email", name="email", placeholder="Email")
+					input#inputEmail.form-control(type="email", name="email", placeholder="Email" required )
 
 				div.form-group
 					label(for="inputPassword") Password
-					input#inputPassword.form-control(type="password",name="password", placeholder="Password")
+					input#inputPassword.form-control(type="password",name="password", placeholder="Password" required )
 
 				button.btn.btn-primary(type="submit") Registrarse
