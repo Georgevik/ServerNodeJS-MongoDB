@@ -12,10 +12,10 @@ block content
 
 		table.table(ng-table="tableParams")
 			tr(ng-repeat="user in usuarios")
-				td.col-lg-3.text-center(data-title="'Usuario'") {{user.usuario}}
-				td.col-lg-3.text-center(data-title="'Email'") {{user.email}}
-				td.col-lg-3.text-center(data-title="'Password'") {{user.password}}
-				td.col-lg-3.text-center
+				td.col-md-3.text-center(data-title="'Usuario'") {{user.usuario}}
+				td.col-md-3.text-center(data-title="'Email'") {{user.email}}
+				td.col-md-3.text-center(data-title="'Password'") {{user.password}}
+				td.col-md-3.text-center
 					input(id="editRowBtn{{user.id}}" type="button", value="Editar", ng-click="modalEditor(user)" )
 
 
